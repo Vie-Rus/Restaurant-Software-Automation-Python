@@ -1,4 +1,4 @@
-# This Restaurant Software Autmotion was created to replace the pencil/paper method most restaurants use to take orders.
+# This Restaurant Software Autmotion was created in python to replace the pencil/paper method most restaurants use to take orders.
 # @authors: Malcolm Holden (Host), Drew Rado (Cook), Lileah Tunno (Wait Staff), Brandan Murphy (Busser)
 
 # Imports
