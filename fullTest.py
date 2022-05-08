@@ -115,10 +115,11 @@ def printTBstat(tbid):
 # pizza Order
 orders_array = []
 class pizzaOrder():
-    def __init__(self, crust, sauce=[], toppings=[]):
+    def __init__(self, crust, sauce=[], toppings=[], notesVar=""):
         self.crust = crust
         self.sauce = sauce
         self.toppings = toppings
+        self.notesVar = notesVar
 
 # Wait staff enters the customer's order:
 def waiterOrder():
@@ -170,7 +171,6 @@ def waiterOrder():
     ttk.Checkbutton(submitOrder, text="Sausage",   variable=top4,onvalue="Sausage, ",   offvalue="").grid(sticky="W", column=4, row=6)
 
     # Additional Notes
-    # Additional Notes cannot be seen by cook At This Moment
     ttk.Label(submitOrder, text="").grid(
         sticky="W", column=0, row=7)  # Empty Space
     ttk.Label(submitOrder, text="Additional Notes:").grid(
@@ -194,11 +194,13 @@ def waiterOrder():
         # sends the order to the cook
         toppingsArray=[top1.get(), top2.get(), top3.get(), top4.get()]
         sauceArray=[cb1.get(), cb2.get(), cb3.get(), cb4.get()]
-        orders_array.append(pizzaOrder(crust1.get(), sauceArray, toppingsArray))
+        orders_array.append(pizzaOrder(crust1.get(), sauceArray, toppingsArray, notesVar.get()))
+
         print(orders_array.__len__())
         print(orders_array[0].crust)
         print(orders_array[0].sauce)
         print(orders_array[0].toppings)
+        print(orders_array[0].notesVar)
 
 
     # Submit Button, calls on def submitted
@@ -211,6 +213,7 @@ def waiterOrder():
 def cookOrders():
     cookOrder=Toplevel(root)
     cookOrder.title("Cook's Orders")
+    cookOrder.geometry("400x150")
     ttk.Label(cookOrder, text="Current Orders: ").grid(column=0, row=0)
 
     numOfOrders = orders_array.__len__()
@@ -220,12 +223,11 @@ def cookOrders():
         ttk.Label(cookOrder, text="Crust: " + orders_array[colNumbner].crust).grid(sticky="W", column=colNumbner, row=2)
         ttk.Label(cookOrder, text="Sauce: " + "".join(orders_array[colNumbner].sauce)).grid(sticky="W", column=colNumbner, row=3)
         ttk.Label(cookOrder, text="Toppings: " + "".join(orders_array[colNumbner].toppings)).grid(sticky="W", column=colNumbner, row=4)
+        ttk.Label(cookOrder, text="Additional Notes: " + "".join(orders_array[colNumbner].notesVar)).grid(sticky="W", column=colNumbner, row=5)
         colNumbner +=1
         numOfOrders -=1
-
-    #TODO make the cooks menu display the additional requests
         
-    ttk.Button(cookOrder, text="Exit", command=(cookOrder.destroy)).grid(column=0, row=5)
+    ttk.Button(cookOrder, text="Exit", command=(cookOrder.destroy)).grid(column=0, row=6)
 
     
 #BUSSER------------------------------------------------------------------------------------------------------------------------------------------------
