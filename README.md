@@ -14,5 +14,5 @@
 
 >Customer: NO CONTACT WITH THE SYSTEM
 
-@authors: Malcolm Holden (Host), Drew Rado (Cook/Main), Lileah Tunno (Wait Staff), Brandan Murphy (Busser)
+@authors: Malcolm Holden (Host), Drew Rado (Cook/Main), Lileah Tunno (Wait Staff/Cook additional notes), Brandan Murphy (Busser)
 
