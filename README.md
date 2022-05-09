@@ -1,5 +1,5 @@
 # Restaurant Software Automation
-- This Restaurant Software Autmotion was created with Python to replace the pencil/paper method most restaurants use to take orders. This will give a higher chance of no human error and improve the restaurant efficiency. It accesses a GUI using python Tkinter. The host and busser will be able to view a CSV file of the tables avaliablitiy. 
+- This Restaurant Software Autmotion was created with Python to replace the pencil/paper method most restaurants use to take orders. This will give a higher chance of no human error and improve the restaurant efficiency. It accesses a GUI using python Tkinter. The host and busser will be able to view a CSV file of the tables availability. 
 
 - User access:
 > Host: view/edit status of tables & properly assign wait staff to sections 
