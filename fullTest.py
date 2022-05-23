@@ -294,7 +294,6 @@ waiterMenu = Button(root, text="Wait Staff", command=waiterOrder, height = 5, wi
 cookMenu = Button(root, text="Cook", command=cookOrders, height = 5, width=20).grid(sticky="W", column=2, row=1)            #Cook
 busserMenu = Button(root, text="Busser", command=busserTables, height = 5, width=20).grid(sticky="W", column=3, row=1)      #Busser
 
-
 # Image
 image1 = Image.open('pizzalogo1-1.png')
 test = ImageTk.PhotoImage(image1)
